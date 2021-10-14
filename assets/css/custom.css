@@ -80,8 +80,8 @@ body {
   box-shadow: inset 0 0 3px black;
   box-sizing: border-box;
   border: 2px solid black;
-  width: 37vw;
-  height: 37vw;
+  width: 39vw;
+  height: 39vw;
   object-fit: cover;
   background-size: cover;
   max-width: 250px;
