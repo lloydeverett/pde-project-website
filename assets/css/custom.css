@@ -59,6 +59,10 @@ body {
   text-align: start !important;
 }
 
+p {
+  text-align: start !important;
+}
+
 #intro {
   padding-top: 6rem !important;
 }
