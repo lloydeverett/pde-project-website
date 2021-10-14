@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -21,6 +22,14 @@
 					<div id="intro">
 						<h1>Propositional Defeasible<br>Explanation</h1>
 						<p>UCT Honours Project in Knowledge Representation and Reasoning</p>
+						
+						<div class="comic-strip">
+							<img src="comic/1.png" class="comic-block">
+							<img src="comic/2.png" class="comic-block">
+							<img src="comic/3.png" class="comic-block">
+							<img src="comic/4.png" class="comic-block">
+						</div>
+
 						<ul class="actions">
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
@@ -28,13 +37,13 @@
 
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo">Massively</a>
+						<a href="index.html" class="logo">Propositional Defeasible Explanation</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="index.html">Overview</a></li>
 							<li><a href="generic.html">Generic Page</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
 						</ul>
@@ -48,8 +57,65 @@
 
 				<!-- Main -->
 					<div id="main">
+						<section class="post">
+							<h2>Background</h2>
+							<h3>Classical Reasoning</h3>
+							<p>
+								Knowledge Representation and Reasoning expresses reasoning in terms of formal languages
+								called <i>logics</i>. While there are many logics, we focus on <i>propositional logic</i> given
+								its foundational role. We can encode knowledge&mdash;e.g. penguins are birds, and birds fly&mdash;in propositional logic
+								and infer new knowledge using <i>entailment</i>:
+								<img src="eqns/entails.png" class="equation" style="max-height: 65px;">
+							</p>
+							<h3>Explanation</h3>
+							<p>
+								Sometimes we want to know why certain entailments hold.
+								<i>Explanation</i> tells us which statements in our knowledge base are responsible for a given entailment.
+								Suppose we know the unrelated information that birds have eyes:
+								<img src="eqns/explanation-2.png" class="equation" style="max-height: 35px;">
+								Explanation shows that only some of these statements are significant to the entailment that penguins fly.
+								Specifically, we find that the statements
+								<img src="eqns/explanation-orig.png" class="equation" style="max-height: 38px;">
+								are the only statements relevant to the conclusion that penguins fly.
+							</p>
+							<p>
+								Explanation has been shown to be an important aspect of reasoning systems.
+								The concept is particularly useful for knowledge base debugging but has also been shown to
+								be important for user comprehension and confidence in reasoning systems.
+							</p>
+							<h3>Defeasible Reasoning</h3>
+							<p>
+								Classical reasoning can be limiting because it cannot easily model statements that <i>typically</i> hold, but for which there might be exceptions.
+								<i>Defeasible reasoning</i> allows us to reason with this uncertainty. So to model penguins a bit more accurately, we rather say:
+								<img src="eqns/defeasible.png" class="equation" style="max-height: 60px;">
+								We utilize a particular approach to defeasible reasoning 
+								called the KLM approach, focusing on three definitions for 
+								defeasible entailment: <i>Rational Closure</i>, <i>Relevant Closure</i>
+								and <i>Lexicographic Closure</i>.
+							</p>
+							<h3>Defeasible Explanation</h3>
+							<p>
+								Explanation has not yet been explored for defeasible reasoning apart from some introductory work.
+								This work includes ideas such as weak and strong explanation which are each notions of explanation for defeasible logic.
+							</p>
+							<h4>Aims</h4>
+							<p>
+								To improve our theoretical understanding of defeasible explanation and propose algorithms for evaluating defeasible explanations within the KLM
+								framework.
+							</p>
+							<h4>Results</h4>
+							<ul>
+								<li>We adapt weak justification—previously only explored for Rational Closure—to Relevant and Lexicographic Closure.</li>
+								<li>We propose an algorithm for the evaluation of strong justifications for KLM-style defeasible reasoning.</li>
+								<li>We give a series of intuitive properties expected for sensible defeasible explanation and show that weak justification satisfies these properties.</li>
+							</ul>
+						</section>
+						<section class="post">
+							This would be another section
+						</section>
 
-						<!-- Featured Post -->
+						<!--
+						Featured Post
 							<article class="post featured">
 								<header class="major">
 									<span class="date">April 25, 2017</span>
@@ -65,7 +131,7 @@
 								</ul>
 							</article>
 
-						<!-- Posts -->
+						Posts
 							<section class="posts">
 								<article>
 									<header>
@@ -140,11 +206,11 @@
 									</ul>
 								</article>
 							</section>
-
-						<!-- Footer -->
+						
+						Footer
 							<footer>
 								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
+									<a href="#" class="previous">Prev</a>
 									<a href="#" class="page active">1</a>
 									<a href="#" class="page">2</a>
 									<a href="#" class="page">3</a>
@@ -155,7 +221,7 @@
 									<a href="#" class="next">Next</a>
 								</div>
 							</footer>
-
+						-->
 					</div>
 
 				<!-- Footer -->
