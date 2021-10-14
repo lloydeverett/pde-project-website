@@ -82,8 +82,7 @@ body {
   border: 2px solid black;
   width: 39vw;
   height: 39vw;
-  object-fit: cover;
-  background-size: cover;
+  background-size: 100% 100%;
   max-width: 250px;
   max-height: 250px;
 }
