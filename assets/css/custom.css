@@ -56,7 +56,7 @@ body {
   font-size: 17px;
   line-height: 28px;
   font-family: 'Lato', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: start;
+  text-align: start !important;
 }
 
 #intro {
@@ -82,7 +82,8 @@ body {
   border: 2px solid black;
   width: 39vw;
   height: 39vw;
-  background-size: 100% 100%;
+  object-fit: cover;
+  background-size: cover;
   max-width: 250px;
   max-height: 250px;
 }
