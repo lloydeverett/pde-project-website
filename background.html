@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Background</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Propositional Defeasible Explanation</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Introduction</a></li>
+							<li class="active"><a href="background.html">Background</a></li>
+							<li><a href="results.html">Results</a></li>
+							<li><a href="resources.html">Resources</a></li>
+						</ul>
+						<!--
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+						-->
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<section class="post">
+							<h3>Classical Reasoning</h3>
+							<p>
+								Knowledge Representation and Reasoning expresses reasoning in terms of formal languages
+								called <i>logics</i>. While there are many logics, we focus on <i>propositional logic</i> given
+								its foundational role. In classical propositional logic, we can encode knowledge&mdash;e.g. penguins are birds, and birds fly&mdash;and infer new knowledge using <i>entailment</i>:
+								<img src="eqns/entails.png" class="equation" style="max-height: 65px;">
+								Classical reasoning is in many ways the foundation for more advanced forms of reasoning such as KLM-style defeasible propositional logic. We therefore begin by considering explanation in the classical case.
+								<!-- and similarly, explanation in the classical case serves as the basis for our exploration of explanation for defeasible reasoning. -->
+							</p>
+							<h3>Explanation</h3>
+							<p>
+								Sometimes we want to know why certain entailments hold.
+								<i>Explanation</i> tells us which statements in our knowledge base are responsible for a given entailment.
+								Suppose we know the unrelated information that birds have eyes:
+								<img src="eqns/explanation-2.png" class="equation" style="max-height: 35px;">
+								In our work, we focus on a form of explanation known as <i>justification</i>. Justifications are minimal subsets of statements that allow us to infer a conclusion. For example, the entailment that penguins fly for the knowledge base above has the justification
+								<!--Explanation shows that only some of these statements are significant to the entailment that penguins fly.
+								Specifically, we find that the statements-->
+								<img src="eqns/explanation-orig.png" class="equation" style="max-height: 38px;">
+								since this amounts to 'just enough' information to allow for the inference that penguins fly. This illustrates how justifications correspond with how people explain inferences when reasoning: we certainly would not state 'birds have eyes' when substantiating why penguins fly.
+							</p>
+							<p>
+								Explanation has been shown to be an important aspect of reasoning systems.
+								The concept is particularly useful for knowledge base debugging but has also been shown to
+								be important for user comprehension and confidence in reasoning systems.
+							</p>
+							<h3>Defeasible Reasoning</h3>
+							<p>
+								Classical reasoning can be limiting because it cannot easily model statements that <i>typically</i> hold, but for which there might be exceptions.
+								Say we try to model penguins a bit more accurately by expressing that penguins do not fly in the knowledge base:
+								<img src="eqns/broken-classical.png" class="equation" style="max-height: 60px;">
+								Since there is both a way to infer that penguins fly and that penguins don't fly&mdash;which is impossible&mdash;classical reasoning concludes that penguins cannot exist.
+								In other words, we have removed our ability to reason about penguins in any meaningful sense.
+
+								What we actually want to express is that birds <i>typically</i> fly, and then we can add that penguins are a specific type of bird that do not fly. <i>Defeasible reasoning</i> allows us to reason with this uncertainty and enables us to describe penguins more accurately:
+
+								<img src="eqns/defeasible.png" class="equation" style="max-height: 75px;">
+
+								Kraus, Lehmann and Magidor propose an approach to defeasible reasoning known as the KLM approach which is defined by a series of declarative properties.
+								We focus on the KLM extension to propositional logic. In the same way that classical entailment allowed us to make
+								inferences from classical knowledge, notions of <i>defeasible entailment</i> enable us to reason about defeasible knowledge. The simplest and most well-known such
+								notion for KLM is <i>Rational Closure</i>.
+							</p>
+							<p>
+								Intuitively, Rational Closure achieves defeasible reasoning by ranking statements according to their typicality, with more general statements having a lower rank and more
+								specific statements having a higher rank. We can think of this as partitioning the knowledge base into a series of levels:
+								<img src="eqns/ranking.png" class="equation" style="max-height: 165px;">
+								Since penguins are a specific (exceptional) kind of bird, statements about penguins are ranked higher than birds, and classical (certain) information appears in a special rank
+								denoted by &infin;. We can use this ranking to make inferences by 'throwing out' the lowest rank of statements until there are no classical inconsistencies left. For example, since
+								the entire knowledge base classically entails that penguins do not exist, we remove the zeroth rank when reasoning about penguins:
+
+								<img src="eqns/ranking-2.png" class="equation" style="max-height: 167px;">
+
+								Since there are no remaining classical inconsistencies regarding penguins, we can use classical reasoning on the remaining statements to reason defeasibly about penguins.
+							</p>
+							<p>
+								Although not evident here, Rational Closure defines quite a conservative style of reasoning since we often 'throw away' more information than is necessary.
+								<i>Relevant</i> and <i>Lexicographic Closure</i> are two different approaches that can be defined similarly but aim to retain more information so as to produce a less conservative form of reasoning.
+							</p>
+							<p>
+
+							</p>
+
+								<!-- Defeasible entailment -->
+								
+								
+								<!-- We utilize a particular approach to defeasible reasoning 
+								called the KLM approach, focusing on three definitions for 
+								defeasible entailment: <i>Rational Closure</i>, <i>Relevant Closure</i>
+								and <i>Lexicographic Closure</i>. -->
+							</p>
+							<!-- <h3>Defeasible Explanation</h3>
+							<p>
+								Explanation has not yet been explored for defeasible reasoning apart from some introductory work.
+								This work includes ideas such as weak and strong explanation which are each notions of explanation for defeasible logic.
+							</p> -->
+						</section>
+
+					</div>
+
+					<footer id="footer">
+						<div class="footer-container">
+							<div class="department">
+								<img src="images/crest.png" height="74px" style="margin-right: 16px; margin-top: 6px;">
+								<div>
+									<span style="font-weight: 700;">University of Cape Town<br>
+									Department of Computer Science<br></span>
+									dept@cs.uct.ac.za
+								</div>
+							</div>
+							<div class="authors">
+								<span style="font-weight: 700;">Lloyd Everett and Emily Morris<br>
+									Supervised by Prof. Thomas Meyer
+								</span>
+								<!--<img src="images/department.png" height="74px" style="margin-left: 16px;">-->
+							</div>
+						</div>
+					</footer>
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul>
+						<li>&copy; University of Cape Town</li>
+						<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+						<li><div>Icons: <a href="https://www.freepik.com" title="Freepik">Freepik</a></div></li>
+					</ul>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
