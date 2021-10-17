@@ -44,18 +44,64 @@
 
 				<!-- Main -->
 					<div id="main">
+					
+						<section class="post">
+							<p>Our results are based on two forms of explanation proposed in the literature for defeasible reasoning which we refer to as <i>weak</i> and <i>strong justification</i>. Before discussing our results, we first introduce these forms of defeasible explanation.</p>
 
-            <section class="post">
-							<div style="margin-bottom: 20px; font-size: 20px;">Lloyd Everett</div>
+							<h2>Weak Justification</h2>
+
+						  <p>
+								A simple way to define explanation for Rational Closure defeasible entailment is to make use of classical justification on the statements that are not 'thrown out' when reasoning. Consider
+								for example the statements that were remaining when reasoning about penguins in our discussion of Rational Closure:
+								<img src="eqns/ranking-2.png" class="equation" style="max-height: 167px;">
+								While we would check for classical entailment on the remaining statements when checking for classical entailment, here we use <i>classical justification</i> on the remaining
+								statements to obtain a form of defeasible explanation. According to this definition, we would for example justify the entailment that penguins typically do not fly using only the relevant statement:
+
+								<img src="eqns/penguins-typically-dont-fly.png" class="equation" style="max-height: 43px;">
+
+								We refer to this form of defeasible explanation as <i>weak justification</i> to distinguish from other forms of defeasible explanation.
+								Weak justification seems to be a fairly intuitive form of defeasible explanation and closely matches the reasoning process for Rational Closure.
+								<!--Weak justification is a promising form of defeasible explanation and
+								corresponds well to the reasoning process for Rational Closure, but has previously only been explored for the case of Rational Closure.
+								 to distinguish it from strong justification which we now turn our attention to.-->
+								<!--Just as we used classical entailment
+								on the remaining statements in the ranking when evaluating defeasible entailment, we can use classical justification
+								on the remaining statements in order to obtain a form of defeasible explanation.
+								. The intuition here is that  For example, consider the statements that were remaining when reasoning about penguins in our Rational Closure example:
+								-->
+
+							</p>
+
+							<h2>Strong Justification</h2>
+
+							<p>
+								While weak justification seems to be a practical form of defeasible explanation, there is some evidence that it may not
+								capture all aspects of the reasoning process. Intuitively, while weak justifications seems to select the statements that are used
+								to obtain the conclusion, it does not necessarily provide context as to why the statements selected are the most applicable. While in the example
+								above the strong justifications are no different than the weak justifications, other examples illustrate the distinction.
+								Consider what happens if we try to reason about an entity directly specified to be both a penguin and a bird (hereafter referred to as a penguin&ndash;bird):
+								<img src="eqns/strong.png" class="equation" style="max-height: 64px;">
+								(Note that knowledge base itself is unchanged in this example.) Suppose we want to decide whether penguin&ndash;birds fly. The fact that penguins are an exceptional kind of bird is critical here
+								as it dictates which one of these two rules in the knowledge base is actually applicable in this circumstance:
+								<img src="eqns/juxtaposition.png" class="equation" style="max-height: 40px; padding-left: 20px;">
+								Of course, it is the latter rule that is applicable as shown in our comic, and indeed this is the rule that applies according to Rational Closure entailment.								
+								The weak justification here is identical to the one we had when reasoning about penguins in our first example:
+								<img src="eqns/penguins-typically-dont-fly.png" class="equation" style="max-height: 43px;">
+								<i>Strong justification</i> is a distinct notion of defeasible explanation defined according to a declarative property (not discussed here). The strong justification, unlike the weak justification, includes the information that penguins are birds and therefore the information that penguins are an exceptional kind of bird:
+								<img src="eqns/strong-instance.png" class="equation" style="max-height: 36px;">
+								This illustrates how strong justifications may be intuitively more comprehensive than weak justifications, although we do find that they are more difficult to compute and have some undesirable sensitivities to syntax.
+							</p>
+							<h2>Results</h2>
+							<div style="margin-bottom: 10px;"><b>Lloyd Everett</b></div>
 							<ul style="margin-left: 20px;">
-								<li>Kek</li>
+								<li>adapts weak justification, previously only explored for Rational Closure, to Relevant Closure; and</li>
+								<li>gives a series of intuitive properties expected for sensible defeasible explanation and shows that weak justification satisfies these properties.</li>
 							</ul>
-							<div style="margin-bottom: 20px; font-size: 20px;">Emily Morris</div>
+							<div style="margin-bottom: 10px;"><b>Emily Morris</b></div>
 							<ul style="margin-left: 20px;">
-								<li>We adapt weak justification—previously only explored for Rational Closure—to Relevant and Lexicographic Closure.</li>
-								<li>We propose an algorithm for the evaluation of strong justifications for KLM-style defeasible reasoning.</li>
-                <li>We propose an alternative general definition for defeasible explanation in the context of an extension of the KLM framework.</li>
-								<li>We give a series of intuitive properties expected for sensible defeasible explanation and show that weak justification satisfies these properties.</li>
+								<li>adapts weak justification to Lexicographic Closure;</li>
+								<li>proposes an algorithm for the evaluation of strong justifications for KLM-style defeasible reasoning; and</li>
+                <li>proposes an alternative general definition for defeasible explanation in the context of an extension of the KLM framework.</li>
 							</ul>
             </section>
 
