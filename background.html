@@ -54,39 +54,39 @@
 								A notion of <i>entailment</i> then enables us to infer new knowledge from existing knowledge:
 								<!-- we can encode knowledge&mdash;e.g. penguins are birds, and birds fly&mdash;and infer new knowledge using <i>entailment</i>: -->
 								<img src="eqns/entails.png" class="equation" style="max-height: 65px;">
-								A set of statements&mdash;such as the LHS of the statement above&mdash;is referred to as a <i>knowledge base</i> since it represents knowledge we have modeled.
+								A set of statements&mdash;such as the LHS of the statement above&mdash;is referred to as a <i>knowledge base</i> since it represents knowledge we have modeled. Modeling information in a knowledge base and using classical entailment to infer information, in the manner demostrated above, provides us with a simple reasoning system. 
 								<!-- and similarly, explanation in the classical case serves as the basis for our exploration of explanation for defeasible reasoning. -->
 							</p>
-							<p>
-								Classical reasoning is in many ways the foundation for more advanced forms of reasoning such as KLM-style defeasible propositional logic. We therefore begin by considering explanation in the classical case.
-							</p>
+							<!--<p>
+								Classical reasoning is in many ways the foundation for more advanced forms of reasoning such as KLM-style defeasible propositional logic. We therefore begin by introducing explanation in the classical case.
+							</p>-->
 							<h2>Explanation</h2>
 							<p>
 								Sometimes we want to know why certain entailments hold.
-								<i>Explanation</i> tells us which statements in our knowledge base are responsible for a given entailment.
+								For classical logic, <i>Explanation</i> tells us which statements in our knowledge base are responsible for a given entailment.
 								In our work, we focus on a form of explanation known as <i>justification</i>. Justifications are minimal subsets of statements that allow us to infer a conclusion.
-								For example, suppose we know the unrelated information that birds have eyes:
+								For example, suppose we know the unrelated information that ‘birds have eyes’:
 								<img src="eqns/explanation-2.png" class="equation" style="max-height: 35px;">
-								The entailment that penguins fly for the knowledge base above then has the justification
+								The entailment that ‘penguins fly’ for the knowledge base above then has the justification
 								<!--Explanation shows that only some of these statements are significant to the entailment that penguins fly.
 								Specifically, we find that the statements-->
 								<img src="eqns/explanation-orig.png" class="equation" style="max-height: 38px;">
-								since this amounts to 'just enough' information to allow for the inference that penguins fly. This illustrates how justifications correspond with how people explain inferences when reasoning: we certainly would not state 'birds have eyes' when substantiating why penguins fly.
+								since this amounts to 'just enough' information to allow for the inference that ‘penguins fly’. This illustrates how justifications correspond with how people explain inferences when reasoning: we certainly would not state ‘birds have eyes’ when substantiating why ‘penguins fly’.
 							</p>
 							<p>
 								Explanation has been shown to be an important aspect of reasoning systems.
 								The concept is particularly useful for knowledge base debugging but has also been shown to
-								be important for user comprehension and confidence in reasoning systems.
+								be important for user comprehension and confidence in reasoning systems. Thus they are an key part of using reasoning systems practically, making them an important concept to extend to defeasible reasoning.
 							</p>
 							<h2>Defeasible Reasoning</h2>
 							<p>
 								Classical reasoning can be limiting because it cannot easily model statements that <i>typically</i> hold, but for which there might be exceptions.
-								Say we try to model penguins a bit more accurately by expressing that penguins do not fly in the knowledge base:
+								Say we try to model penguins a bit more accurately by expressing that ‘penguins do not fly’ in the knowledge base:
 								<img src="eqns/broken-classical.png" class="equation" style="max-height: 60px;">
-								Since there is both a way to infer that penguins fly and that penguins don't fly&mdash;which is impossible&mdash;classical reasoning concludes that penguins cannot exist.
+								Since there is both a way to infer that ‘penguins fly’ and that ‘penguins do not fly’&mdash;which is impossible&mdash;classical reasoning concludes that penguins cannot exist.
 								In other words, we have removed our ability to reason about penguins in any meaningful sense.
 
-								What we actually want to express is that birds <i>typically</i> fly, and then we can add that penguins are a specific type of bird that do not fly. <i>Defeasible reasoning</i> allows us to reason with this uncertainty and enables us to describe penguins more accurately:
+								What we actually want to express is that ‘birds <i>typically</i> fly’, and then we can add that penguins are a specific type of bird that do not fly. <i>Defeasible reasoning</i> allows us to reason with this uncertainty and enables us to describe penguins more accurately:
 
 								<img src="eqns/defeasible.png" class="equation" style="max-height: 75px;">
 
