@@ -52,10 +52,10 @@
 
 						  <p>
 								A simple way to define explanation for Rational Closure defeasible entailment is to make use of classical justification on the statements that are not 'thrown out' when reasoning. Consider
-								for example the statements that were remaining when reasoning about penguins in our discussion of Rational Closure:
+								for example the statements that were remaining when reasoning about penguins flying in our discussion of Rational Closure:
 								<img src="eqns/ranking-2.png" class="equation" style="max-height: 167px;">
-								While we would check for classical entailment on the remaining statements when checking for classical entailment, here we use <i>classical justification</i> on the remaining
-								statements to obtain a form of defeasible explanation. According to this definition, we would for example justify the entailment that penguins typically do not fly using only the relevant statement:
+								While we would check for classical entailment on the remaining statements when checking for defeasible entailment, here we use <i>classical justification</i> on the remaining
+								statements to obtain a form of defeasible explanation. According to this definition, we would for example justify the entailment that ‘penguins typically do not fly’ using only the relevant statement:
 
 								<img src="eqns/penguins-typically-dont-fly.png" class="equation" style="max-height: 43px;">
 
@@ -79,29 +79,29 @@
 								capture all aspects of the reasoning process. Intuitively, while weak justifications seems to select the statements that are used
 								to obtain the conclusion, it does not necessarily provide context as to why the statements selected are the most applicable. While in the example
 								above the strong justifications are no different than the weak justifications, other examples illustrate the distinction.
-								Consider what happens if we try to reason about an entity directly specified to be both a penguin and a bird (hereafter referred to as a penguin&ndash;bird):
+								Consider what happens if we try use the information we previously modeled to reason about an entity directly specified to be both a penguin and a bird (hereafter referred to as a penguin&ndash;bird):
 								<img src="eqns/strong.png" class="equation" style="max-height: 64px;">
-								(Note that knowledge base itself is unchanged in this example.) Suppose we want to decide whether penguin&ndash;birds fly. The fact that penguins are an exceptional kind of bird is critical here
+								Suppose we want to decide whether ‘penguin&ndash;birds typically fly’. The fact that penguins are an exceptional kind of bird is critical here
 								as it dictates which one of these two rules in the knowledge base is actually applicable in this circumstance:
 								<img src="eqns/juxtaposition.png" class="equation" style="max-height: 40px; padding-left: 20px;">
 								Of course, it is the latter rule that is applicable as shown in our comic, and indeed this is the rule that applies according to Rational Closure entailment.								
 								The weak justification here is identical to the one we had when reasoning about penguins in our first example:
 								<img src="eqns/penguins-typically-dont-fly.png" class="equation" style="max-height: 43px;">
-								<i>Strong justification</i> is a distinct notion of defeasible explanation defined based on the idea that no matter what information we add from our knowledge base, the strong justification still defeasibly entails the statement. The strong justification, unlike the weak justification, includes the information that penguins are birds and therefore the information that penguins are an exceptional kind of bird:
+								<i>Strong justification</i> is a distinct notion of defeasible explanation defined based on the idea that no matter what information we add from our knowledge base, the strong justification still defeasibly entails the statement. The strong justification, unlike the weak justification, includes the information that ‘penguins are birds’ and therefore the information that penguins are an exceptional kind of bird:
 								<img src="eqns/strong-instance.png" class="equation" style="max-height: 36px;">
 								This illustrates how strong justifications may be intuitively more comprehensive than weak justifications, although we do find that they are more difficult to compute and have some undesirable sensitivities to syntax.
 							</p>
 							<h2>Results</h2>
 							<div style="margin-bottom: 10px;"><b>Lloyd Everett</b></div>
 							<ul style="margin-left: 20px;">
-								<li>adapts weak justification, previously only explored for Rational Closure, to Relevant Closure; and</li>
-								<li>gives a series of intuitive properties expected for sensible defeasible explanation and shows that weak justification satisfies these properties.</li>
+								<li>Adapts weak justification, previously only explored for Rational Closure, to Relevant Closure; and</li>
+								<li>Gives a series of intuitive properties expected for sensible defeasible explanation and shows that weak justification satisfies these properties.</li>
 							</ul>
 							<div style="margin-bottom: 10px;"><b>Emily Morris</b></div>
 							<ul style="margin-left: 20px;">
-								<li>adapts weak justification to Lexicographic Closure;</li>
-								<li>proposes an algorithm for the evaluation of strong justifications for KLM-style defeasible reasoning; and</li>
-                <li>proposes an alternative general definition for defeasible explanation in the context of an extension of the KLM framework.</li>
+								<li>Adapts weak justification to Lexicographic Closure;</li>
+								<li>Proposes an algorithm for the evaluation of strong justifications for KLM-style defeasible reasoning; and</li>
+                <li>Proposes an alternative general definition for defeasible explanation in the context of an extension of the KLM framework.</li>
 							</ul>
             </section>
 
