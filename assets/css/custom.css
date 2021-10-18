@@ -63,7 +63,12 @@ p {
   text-align: start !important;
 }
 
-h2 {
+.next-button {
+  display: block; margin-left: auto; margin-top: 40px; box-shadow: none;
+  margin-right: 0;
+}
+.next-button:hover {
+  box-shadow: none;
 }
 
 #intro {
