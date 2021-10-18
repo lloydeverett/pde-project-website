@@ -49,19 +49,25 @@
 							<h2>Classical Reasoning</h2>
 							<p>
 								Knowledge Representation and Reasoning expresses reasoning in terms of formal languages
-								called <i>logics</i>. While there are many logics, we focus on <i>propositional logic</i> given
-								its foundational role. In classical propositional logic, we can encode knowledge&mdash;e.g. penguins are birds, and birds fly&mdash;and infer new knowledge using <i>entailment</i>:
+								called <i>logics</i>. While there are many logics, we focus on <i>propositional logic</i> and use <i>classical propositional logic</i> as the basis for extension to KLM-style defeasible reasoning.
+								In classical propositional logic, we can encode objects such as penguins and birds as <i>propositional atoms</i> and use binary connectives to build more complex statements called <i>formulas</i>.
+								A notion of <i>entailment</i> then enables us to infer new knowledge from existing knowledge:
+								<!-- we can encode knowledge&mdash;e.g. penguins are birds, and birds fly&mdash;and infer new knowledge using <i>entailment</i>: -->
 								<img src="eqns/entails.png" class="equation" style="max-height: 65px;">
-								Classical reasoning is in many ways the foundation for more advanced forms of reasoning such as KLM-style defeasible propositional logic. We therefore begin by considering explanation in the classical case.
+								A set of statements&mdash;such as the LHS of the statement above&mdash;is referred to as a <i>knowledge base</i> since it represents knowledge we have modeled.
 								<!-- and similarly, explanation in the classical case serves as the basis for our exploration of explanation for defeasible reasoning. -->
+							</p>
+							<p>
+								Classical reasoning is in many ways the foundation for more advanced forms of reasoning such as KLM-style defeasible propositional logic. We therefore begin by considering explanation in the classical case.
 							</p>
 							<h2>Explanation</h2>
 							<p>
 								Sometimes we want to know why certain entailments hold.
 								<i>Explanation</i> tells us which statements in our knowledge base are responsible for a given entailment.
-								Suppose we know the unrelated information that birds have eyes:
+								In our work, we focus on a form of explanation known as <i>justification</i>. Justifications are minimal subsets of statements that allow us to infer a conclusion.
+								For example, suppose we know the unrelated information that birds have eyes:
 								<img src="eqns/explanation-2.png" class="equation" style="max-height: 35px;">
-								In our work, we focus on a form of explanation known as <i>justification</i>. Justifications are minimal subsets of statements that allow us to infer a conclusion. For example, the entailment that penguins fly for the knowledge base above has the justification
+								The entailment that penguins fly for the knowledge base above then has the justification
 								<!--Explanation shows that only some of these statements are significant to the entailment that penguins fly.
 								Specifically, we find that the statements-->
 								<img src="eqns/explanation-orig.png" class="equation" style="max-height: 38px;">
