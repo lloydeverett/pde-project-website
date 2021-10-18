@@ -1,2 +1,0 @@
-
-* Look at removing JS
